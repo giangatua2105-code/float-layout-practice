@@ -1,0 +1,164 @@
+/* ==========================================================
+   1. RESET CƠ BẢN
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ==========================================================
+   2. HEADER & FOOTER (tùy chọn)
+   ========================================================== */
+.header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   3. CONTAINER BAO BỌC BỐ CỤC
+   ========================================================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================
+   4. CỘT BÊN TRÁI - NỘI DUNG CHÍNH (60%)
+   - width: 60%      → chiếm 60% chiều rộng container
+   - float: left     → đẩy sang trái, các phần tử sau bao quanh
+   - box-sizing: border-box → padding/border tính vào width
+   ========================================================== */
+.left-column {
+  width: 60%;
+  float: left;
+  background-color: lightblue;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  min-height: 300px;
+}
+
+.left-column h2 {
+  color: #1a5276;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2874a6;
+  padding-bottom: 8px;
+}
+
+.left-column p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.left-column code {
+  background-color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  color: #c0392b;
+}
+
+/* ==========================================================
+   5. CỘT BÊN PHẢI - SIDEBAR (38%)
+   - width: 38%      → chiếm 38% chiều rộng container
+   - float: right    → đẩy sang phải
+   - Tổng: 60% + 38% = 98% → còn 2% làm khoảng cách
+   ========================================================== */
+.right-column {
+  width: 38%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  min-height: 300px;
+}
+
+.right-column h3 {
+  color: #1e6f3f;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 8px;
+}
+
+.right-column p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.right-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-column ul li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-column ul li:hover {
+  background-color: #ffffff;
+  transform: translateX(5px);
+  font-weight: bold;
+  color: #1e6f3f;
+}
+
+/* ==========================================================
+   6. XỬ LÝ FLOAT - CLEARFIX
+   Khi các phần tử con được float, phần tử cha sẽ bị "sụp"
+   (height = 0) vì float thoát khỏi luồng tài liệu.
+   Kỹ thuật ::after với clear: both giải quyết vấn đề này.
+   ========================================================== */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ==========================================================
+   7. RESPONSIVE - Xếp chồng trên màn hình nhỏ
+   ========================================================== */
+@media (max-width: 768px) {
+  .left-column,
+  .right-column {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+}

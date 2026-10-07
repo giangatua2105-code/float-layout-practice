@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục bằng Float</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header (tùy chọn, giúp trang hoàn chỉnh hơn) -->
+    <header class="header">
+      <h1>Bố cục hai cột với Float và Clear</h1>
+    </header>
+
+    <!-- Container bao bọc toàn bộ bố cục -->
+    <div class="container">
+      <!-- Cột bên trái: nội dung chính (60%) -->
+      <div class="left-column">
+        <h2>Cột bên trái chứa nội dung chính</h2>
+        <p>
+          Đây là cột chính của trang web, chiếm <strong>60%</strong> chiều rộng.
+          Nội dung chính thường chứa các bài viết, sản phẩm, hoặc thông tin quan
+          trọng nhất mà người dùng cần xem.
+        </p>
+        <p>
+          Để tạo cột này, chúng ta sử dụng thuộc tính
+          <code>float: left</code> kết hợp với <code>width: 60%</code>. Khi một
+          phần tử được float, nó sẽ thoát khỏi luồng tài liệu bình thường và các
+          phần tử khác sẽ bao quanh nó.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+          amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam,
+          quas. Dolorum, quod. Quos, nemo. Dolore, quod.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+          amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam,
+          quas. Dolorum, quod. Quos, nemo. Dolore, quod.
+        </p>
+      </div>
+
+      <!-- Cột bên phải: sidebar (38%) -->
+      <div class="right-column">
+        <h3>Cột bên phải chứa sidebar</h3>
+        <p>
+          Đây là cột phụ, chiếm <strong>38%</strong> chiều rộng. Sidebar thường
+          chứa menu, quảng cáo, bài viết liên quan, hoặc các widget bổ trợ khác.
+        </p>
+        <ul>
+          <li>🔗 Liên kết hữu ích 1</li>
+          <li>🔗 Liên kết hữu ích 2</li>
+          <li>🔗 Liên kết hữu ích 3</li>
+          <li>🔗 Liên kết hữu ích 4</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer (tùy chọn) -->
+    <footer class="footer">
+      <p>&copy; 2026 - Bài thực hành Float và Clear trong CSS</p>
+    </footer>
+  </body>
+</html>
